@@ -13,4 +13,3 @@ while True:
     TempData = sh.readFromArduino(ArduinoNano)
 
     print(TempData)
-
