@@ -20,7 +20,7 @@ def openSerialPort(fdeviceName, fport, fbaud, ftimeout):
         return None
 
     
-
+#Read data from the device with error handling
 def readFromArduino(fdevice):
     
     try:
@@ -35,6 +35,16 @@ def readFromArduino(fdevice):
     
     except KeyboardInterrupt:
         raise
+
+
+#Parse the incoming data
+def packetParsing(fincomingData):
+    
+    dataList = fincomingData.split(":")
+    fsensorName = dataList[0]
+    fsensorValue = int(dataList[1]) #convert the string value to an integer value
+
+    return fsensorName, fsensorValue
 
 
 
