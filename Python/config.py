@@ -1,0 +1,6 @@
+DEVICE_NAME = "ArduinoNano"
+
+PORT = "COM5"
+BAUDRATE = 9600
+TIMEOUT = 1 #1000 ms
+
